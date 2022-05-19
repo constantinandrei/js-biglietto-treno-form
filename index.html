@@ -12,24 +12,58 @@
 <body>
     <div class="section vh-100 py-5">
         <div class="container">
-            <form action="">
-                <label for="nome-cognome">Nome Cognome</label>
-                <input type="text" name="nome-cognome" id="nome-cognome">
-                <label for="km-da-percorrere">Km da percorrere</label>
-                <input type="text" name="km-da-percorrere" id="km-da-percorrere">
-                <label for="fascia-di-eta">Fascia d'età</label>
-                <select name="fascia-di-eta" id="fascia-di-eta">
-                        <option value="">-</option>
-                        <option value="discount-20">Minorenne</option>
-                        <option value="full-Price">Magiorenne</option>
-                        <option value="discount-40">Over 65</option>
-                </select>
-                <button type="button" id="create-ticket">
-                    Genera
-                </button>
-                <button type="button" id="cancel">
-                    Annulla
-                </button>
+            <div class="insert-data-wrapper">
+                <form action="">
+                    <label for="nome-cognome">Nome Cognome</label>
+                    <input type="text" name="nome-cognome" id="nome-cognome">
+                    <label for="km-da-percorrere">Km da percorrere</label>
+                    <input type="text" name="km-da-percorrere" id="km-da-percorrere">
+                    <label for="fascia-di-eta">Fascia d'età</label>
+                    <select name="fascia-di-eta" id="fascia-di-eta">
+                            <option value="">-</option>
+                            <option value="discount-20">Minorenne</option>
+                            <option value="full-Price">Magiorenne</option>
+                            <option value="discount-40">Over 65</option>
+                    </select>
+                    <button type="button" id="create-ticket">
+                        Genera
+                    </button>
+                    <button type="button" id="cancel">
+                        Annulla
+                    </button>
+            </div>
+
+            <div class="ticket p-2">
+                <div>
+                    DETTAGLIO PASSEGERI
+                </div>
+                <div class="row">
+                    <div class="col col-3">
+                        <div class="div">
+                            Nome Passegero
+                        </div>
+                        <div id="nome-passeggero"></div>
+                    </div>
+                    <div class="col row">
+                        <div class="col">
+                            <div>Offerta</div>
+                            <div id="offerta"></div>
+                        </div>
+                        <div class="col">
+                            <div>Carrozza</div>
+                            <div id="carrozza"></div>
+                        </div>
+                        <div class="col">
+                            <div>Codice CP</div>
+                            <div id="codice-cp"></div>
+                        </div>
+                        <div class="col">
+                            <div>Costo Biglietto</div>
+                            <div id="costo-biglietto"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             </form>
         </div>
     </div>

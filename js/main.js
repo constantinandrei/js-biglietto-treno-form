@@ -36,6 +36,8 @@ let finalPrice;
 const inputUserCompleteName = document.getElementById("nome-cognome");
 const inputKm = document.getElementById("km-da-percorrere");
 const inputAgeRange = document.getElementById('fascia-di-eta');
+
+
 // validazione dei dati inseriti
 let dataTypeOk = true;
 
@@ -70,7 +72,7 @@ buttonCreateTicket.addEventListener('click', function () {
         const carriage = document.getElementById('carrozza');
         const ticketPrice = document.getElementById('costo-biglietto');
 
-        passengerName.innerHTML = inputUserCompleteName.textContent;
+        passengerName.innerHTML = inputUserCompleteName.value;
         ticketPrice.innerHTML = finalPrice;
     }
 

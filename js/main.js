@@ -26,17 +26,20 @@ il responsive è opzionale!!!!
 const buttonCreateTicket = document.getElementById('create-ticket')
 
 const priceForKm = 0.21;
+const discount20 = 0.2;
+const discount40 = 0.4;
 
+let finalPrice;
 // raccolta dati dal form
 
-const inputUserCompleteName = document.getElementById('nome-cognome');
-const inputKm = document.getElementById('km-da-percorrere');
+const inputUserCompleteName = document.getElementById("nome-cognome");
+const inputKm = document.getElementById("km-da-percorrere");
 const inputAgeRange = document.getElementById('fascia-di-eta');
 // validazione dei dati inseriti
 
 let dataTypeOk = true;
 
-// calcolo prezzo del biglietto
+
 
 // calcolo dati del biglieto random
 
@@ -47,5 +50,23 @@ let dataTypeOk = true;
 // funzionamento pulsanti del form
 
 buttonCreateTicket.addEventListener('click', function () {
-    console.log(inputUserCompleteName.value, inputKm.value, inputAgeRange.value)
+
+    if (dataTypeOk) {
+        finalPrice = priceForKm * inputKm.value;
+        if (inputAgeRange.value === 'discount-20') {
+            finalPrice -= finalPrice * discount20;
+        }
+    
+        if (inputAgeRange.value === 'discount-40') {
+            finalPrice -= finalPrice * discount40;
+        }
+
+        finalPrice = finalPrice.toFixed(2);
+    }
+
+
+    console.log(inputUserCompleteName.value, inputKm.value, inputAgeRange.value,  finalPrice);
+    
 })
+
+// calcolo prezzo del biglietto

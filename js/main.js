@@ -23,7 +23,9 @@ il responsive è opzionale!!!!
 */
 
 // variabili const
-const buttonCreateTicket = document.getElementById('create-ticket')
+const buttonCreateTicket = document.getElementById('create-ticket');
+const cancelButton = document.getElementById('cancel');
+const generatedTicket = document.getElementById('generated-ticket')
 
 const priceForKm = 0.21;
 const discount20 = 0.2;
@@ -67,12 +69,24 @@ buttonCreateTicket.addEventListener('click', function () {
 
         finalPrice = finalPrice.toFixed(2);
 
-        const passengerName = document.getElementById('nome-passegero');
+        
+
+        if (generatedTicket.classList.contains('d-none')) {
+            generatedTicket.classList.remove('d-none');
+        } 
+
+        // display dati nel form
+
+        const passengerName = document.getElementById('nome-passeggero');
         const tiketOffert = document.getElementById('offerta');
         const carriage = document.getElementById('carrozza');
+        const cpCode = document.getElementById('codice-cp');
         const ticketPrice = document.getElementById('costo-biglietto');
 
         passengerName.innerHTML = inputUserCompleteName.value;
+        tiketOffert.innerHTML = offert;
+        carriage.innerHTML = "";
+        cpCode.innerHTML = "";
         ticketPrice.innerHTML = finalPrice;
     }
 
@@ -81,4 +95,14 @@ buttonCreateTicket.addEventListener('click', function () {
     
 })
 
-// display dati nel form
+cancelButton.addEventListener('click', function () {
+    if (!generatedTicket.classList.contains('d-none')) {
+        generatedTicket.classList.add('d-none');
+    }
+
+    inputAgeRange.value = '';
+    inputUserCompleteName.value = '';
+    inputKm.value = '';
+})
+
+

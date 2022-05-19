@@ -43,8 +43,6 @@ const inputAgeRange = document.getElementById('fascia-di-eta');
 // validazione dei dati inseriti
 let dataTypeOk = true;
 
-
-
 // calcolo dati del biglieto random
 let offert = 'Standard';
 
@@ -87,7 +85,7 @@ buttonCreateTicket.addEventListener('click', function () {
         tiketOffert.innerHTML = offert;
         carriage.innerHTML = "";
         cpCode.innerHTML = "";
-        ticketPrice.innerHTML = finalPrice;
+        ticketPrice.innerHTML = '€ ' + finalPrice;
     }
 
 

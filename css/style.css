@@ -1,7 +1,34 @@
+h1 {
+    color: white;
+}
+
 .section {
     background-color: #B91450;
 }
 
 .container {
     max-width: 960px;
+}
+
+input, select {
+    display: block;
+    margin: 1rem auto;
+    line-height: 1.5rem;
+    height: 2.5rem;
+    border-radius: .5rem;
+    padding: .3rem 1rem;
+    border-color: #B91450;
+}
+
+button {
+    border-color: #B91450;
+    margin-top: 1rem .3rem;
+    display: inline-block;
+}
+
+.insert-data-wrapper {
+    background-color: white;
+    color: #B91450;
+    padding: 1rem;
+    border-radius: 20px;
 }

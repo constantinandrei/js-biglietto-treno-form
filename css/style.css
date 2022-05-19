@@ -1,4 +1,4 @@
-h1 {
+h1, h2 {
     color: white;
 }
 
@@ -17,7 +17,7 @@ input, select {
     height: 2.5rem;
     border-radius: .5rem;
     padding: .3rem 1rem;
-    border-color: #B91450;
+    border-color: 1px solid #B91450;
 }
 
 button {
@@ -31,4 +31,13 @@ button {
     color: #B91450;
     padding: 1rem;
     border-radius: 20px;
+}
+
+#generated-ticket {
+    background-color: white;
+}
+
+.border-div {
+    border-top: 1px solid darkgray;
+    border-bottom: 1px solid darkgray;
 }

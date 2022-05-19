@@ -19,19 +19,22 @@
                         <div class="col-4">
                             <label for="nome-cognome">Nome Cognome</label>
                             <input type="text" name="nome-cognome" id="nome-cognome">
+                            <label id="name-error-message" for="nome-cognome"></label>
                         </div>
                         <div class="col-4">
                             <label for="km-da-percorrere">Km da percorrere</label>
-                            <input type="text" name="km-da-percorrere" id="km-da-percorrere">
+                            <input type="number" name="km-da-percorrere" id="km-da-percorrere">
+                            <label id="km-error-message" for="km-da-percorrere"></label>
                         </div>
                         <div class="col-4">
                             <label for="fascia-di-eta">Fascia d'età</label>
-                        <select name="fascia-di-eta" id="fascia-di-eta">
-                                <option value="">-</option>
-                                <option value="discount-20">Minorenne</option>
-                                <option value="full-Price">Magiorenne</option>
-                                <option value="discount-40">Over 65</option>
-                        </select>
+                            <select name="fascia-di-eta" id="fascia-di-eta">
+                                    <option value="">-</option>
+                                    <option value="discount-20">Minorenne</option>
+                                    <option value="full-Price">Magiorenne</option>
+                                    <option value="discount-40">Over 65</option>
+                            </select>
+                            <label id="age-error-message" for="fascia-di-eta"></label>
                         </div>
                     </div>
                     

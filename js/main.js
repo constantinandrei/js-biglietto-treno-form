@@ -80,6 +80,12 @@ buttonCreateTicket.addEventListener('click', function () {
         // calcolo prezzo del biglietto
 
         finalPrice = priceForKm * inputKm.value;
+
+        if (inputAgeRange.value === 'full-Price') {
+            finalPrice -= finalPrice * discount20;
+            offert = "Standard";
+        }
+
         if (inputAgeRange.value === 'discount-20') {
             finalPrice -= finalPrice * discount20;
             offert = "Sconto 20%";
